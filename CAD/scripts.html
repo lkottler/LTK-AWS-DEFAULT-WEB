@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="styles.css">
+    
+  <script type="text/javascript" src="toc.js"></script>
+
+  <head>
+    <title>LTK Script case COMMAND</title>
+  </head>
+
+  <header>
+    <div class="header">
+      Script Guide
+    </div>
+  </header>
+
+  <body>
+    <br>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="home.html">Back to Home</a>
+      <a href="#ColorZeroElev">ColorZeroElev</a>
+      <a href="#CondensePointNums">CondensePointNums</a>
+      <a href="#LayerMaker">LayerMaker</a>
+      <a href="#LayerLegend">LayerLegend</a>
+      <a href="#CurbStake">CurbStake</a>
+      <a href="#FilePoke">FilePoke</a>
+    </div>
+
+    <button type="button" class="toc_btn" onclick="toggleNav()">Table of Contents</button>
+
+    <div id="script_container">
+      <h1 id="ColorZeroElev">ColorZeroElev.lsp</h1>
+      <h4>Stage: EXPERIMENTAL</h4>
+       <div class="container">
+        <div class="text">
+          <h3>Command: <span class="lsp_c">COLORZEROELEV</span></h3>
+          <h2>
+            This program prompts for entity selection. It <i>CURRENTLY</i> deletes and duplicates all entities with 0 elevation into red copies. This is an experimental version and lacks testing.</h2>
+        </div>
+
+        <div class="image">
+        </div>
+      </div>
+    </div>
+
+    <div id="script_container">
+    <h1 id="CondensePointNums">CondensePointNums.lsp</h1>
+    <h4>Stage: 80% TESTED</h4>
+
+    <div class="container">
+      <div class="text">
+        <h3>Command: <span class="lsp_c">CONDENSE_POINTS</span></h3>
+        <h2>
+          This program works by removing all gaps in point numbers in selected points. It uses the smallest point number as the base.</h2>
+      </div>
+
+      <div class="image">
+        <img src="res/condense.gif" alt="CondensePoints.gif" class="scr_img">
+      </div>
+    </div>
+  </div>
+
+
+
+    <div id="script_container">
+    <h1 id="LayerMaker">LayerMaker.lsp</h1>
+    <h4>Stage: MISSING DCL DIALOGUE BOX</h4>
+
+    <div class="container">
+      <div class="text">
+        <h3>Command: <span class="lsp_c">EXCEL_MAKE</span></h3>
+        <h2>
+          Program creates layers from excel .xls with Name, Linetype, Color.<br>Version 2021-12-01 currently does not prompt for organization of excel columns, assumes E,F,G for Name,Color,Linetype</h2>
+          <h3>Command: <span class="lsp_c">EXCEL_CONVERT</span></h3>
+        <h2>
+          Converts layers in A,B,C to layers in E,F,G. Iteratively runs MERGE_LAYER command.<br> format as Name,Color,Linetype</h2>
+      </div>
+
+      <div class="image">
+      </div>
+    </div>
+</div>
+
+    <div id="script_container">
+    <h1 id="LayerLegend">LayerLegend.lsp</h1>
+    <h4>Stage: COMPLETE</h4>
+
+    <div class="container">
+      <div class="text">
+        <h3>Command: <span class="lsp_c">LAYERLEGEND</span></h3>
+        <h2>
+          Creates a visual for layer status on any drawing.</h2>
+      </div>
+
+      <div class="image">
+        <img src="res/legend_dcl.png" alt="Layer DCL" class="scr_img">
+      </div>
+    </div>
+    <img src="res/layerlegend.png" alt="LayerLegend" class="full_img">
+    </div>
+
+    <div id="script_container">
+    <h1 id="CurbStake">CurbStake.lsp</h1>
+    <h4>Stage: 60% IN PROGRESS</h4>
+    <div class="container">
+      <div class="text">
+        <h3>Command: <span class="lsp_c">CURBSTAKE</span></h3>
+        <h2>
+          Will stake points of a curb intelligently</h2>
+
+        <h3>Command: <span class="lsp_c">STAKE_SINGLEPOINT</span></h3>
+        <h2>
+          Prompts for surface selection, prompts for coordinate, creates cogo point with elevation from coordinate, but point is offset with x,y input.</h2>
+      </div>
+
+      
+
+      <div class="image">
+      </div>
+    </div>
+    </div>
+
+    <div id="script_container">
+    <h1 id="FilePoke">FilePoke.lsp</h1>
+    <h4>Stage: DEV TOOLS</h4>
+    <div class="container">
+      <div class="text">
+        <h2>WARNING: This script is mostly for inquiry in how the program is operating, and is useful for creation of more scripts. This is useful only if you know what you are doing.</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="text">
+        <h3>Command: <span class="lsp_c">LAYER_PRINT</span></h3>
+        <h2>Prints dxf of every layer to console.</h2>
+      </div>
+      <div class="image"> 
+        <img src="res/layer_print.png" alt="Layer DCL" class="scr_img">
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="text">
+        <h3>Command: <span class="lsp_c">ENTITY_DUMP</span></h3>
+        <h2>Prompts for entity selection, prints properties of entity to console</h2>
+      </div>
+      <div class="image"> 
+        <img src="res/entity_dump.png" alt="Layer DCL" class="scr_img">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="text">
+        <h3>Command: <span class="lsp_c">ENTITY_PRINT</span></h3>
+        <h2>Similar to ENTITY_DUMP, but simply prints the entity with (print entx), rather than calling (vlax-dump-object entity T) such in ENTITY_DUMP </h2>
+      </div>
+      <div class="image"> 
+        <img src="res/entity_print.png" alt="Layer DCL" class="scr_img">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="text">
+        <h3>Command: <span class="lsp_c">GET330NAME</span></h3>
+        <h2>(COMPLEX) Prompts for entity selection, prints linked-list name of entity in dxf 330</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="text">
+        <h3>Command: <span class="lsp_c">FEATURE_LINE_DUMP</span></h3>
+        <h2>Experimental printing of feature line DXFs.</h2>
+        <br>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="text">
+        <h3>Command: <span class="lsp_c">FEATURE_LINE_PIS</span></h3>
+        <h2>Prints all PIs in a feature line.</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="text">
+        <h3>Command: <span class="lsp_c">COGO_LIST_COOR</span></h3>
+        <h2>Prints coordinates of all cogo points in selection.</h2>
+      </div>
+    </div>
+    </div>
+    </div>
+    <div class="logo">
+          <img src="res/donofrio-logo.png" alt="donofrio-logo">
+    </div>
+   </body>
+
+
+
+</html>
