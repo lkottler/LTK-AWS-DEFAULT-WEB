@@ -6,7 +6,7 @@ var mouseObj,
 
 function init_cat(){
 	catObj = init_graphic(width/2, height/2, 400, 500, 1, 1, 
-		'res/img/cat.png', '', 1, 0,
+		'res/img/cat.png', '', 1, 0,cheesies
 
 	// Functionality of the cat
 	function() {

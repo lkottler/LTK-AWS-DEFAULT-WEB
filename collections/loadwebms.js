@@ -1,3 +1,16 @@
+var folder = "webms/";
+
+$.ajax({
+    url : folder,
+    success: function (data) {
+        $(data).find("a").attr("href", function (i, val) {
+            if( val.match(/\.(webms)$/) ) { 
+            	console.log("<video src='"+ folder + val +"'>")
+            } 
+        });
+    }
+});
+
 var total_videos = 2;
 
 for (let i = 1; i < (total_videos + 1); i++) {
