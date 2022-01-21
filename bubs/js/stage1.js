@@ -3,7 +3,7 @@ var warriorObj,
 
 function init_warrior(){
 	warriorObj = init_graphic(200, 150, 741, 547, 0.4, 1, 
-		'res/img/warrior.png', 'Purchase Mouse Warrior\nCost: 50 Cheesies', 1, 1,
+		'res/img/warrior.png', 'Purchase Mouse Warrior\nCost: 50 pats', 1, 1,
 
 	// Functionality of the graphic
 	function() {
@@ -12,7 +12,7 @@ function init_warrior(){
 			cheesies-=50;
 			warrior.alive = true;
 			console.log('updating');
-			update_text(warriorObj[1], "Revive Warrior\nCost: 50 Cheesies");
+			update_text(warriorObj[1], "Revive Warrior\nCost: 50 pats");
 		}
 	});
 }

@@ -1,33 +1,30 @@
-var folder = "webms/";
+var categories = [{"folder": "trollface", "count": 20}, {"folder": "terry", "count": 0}];
+var test = categories.findIndex(x => x.folder === "terry");
+console.log(categories[test].count);
 
-$.ajax({
-    url : folder,
-    success: function (data) {
-        $(data).find("a").attr("href", function (i, val) {
-            if( val.match(/\.(webms)$/) ) { 
-            	console.log("<video src='"+ folder + val +"'>")
-            } 
-        });
-    }
-});
 
-var total_videos = 2;
+var category = "trollface";
+var count = categories[categories.findIndex(x => x.folder === category)].count;
 
-for (let i = 1; i < (total_videos + 1); i++) {
-	var video = document.createElement('video');
 
-	video.src = "video/webm";
-	video.src = "webms/" + i + ".webm";
+function generateVideos(){
+	for (let i = 1; i < (count + 1); i++) {
+		var video = document.createElement('video');
 
-	video.setAttribute("id", "vid" + i);
-	video.setAttribute("width", "400");
-	video.setAttribute("height", "300");
-	video.setAttribute("controls", "controls");
-	document.body.appendChild(video);
+		video.src = "video/webm";
+		video.src = "webms/" + category + "/" + i + ".webm";
+
+		video.setAttribute("id", "vid" + i);
+		video.setAttribute("width", "376");
+		video.setAttribute("height", "260");
+		video.setAttribute("controls", "controls");
+		document.body.appendChild(video);
+	}
 }
 
+
 function destroyVideos(){
-	for (let i = 1; i < (total_videos + 1); i++) {
+	for (let i = 1; i < (count + 1); i++) {
 		var elem = document.getElementById("vid" + i);
 		document.body.removeChild(elem);
 	}
