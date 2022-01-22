@@ -14,7 +14,7 @@ function init_cat(){
 
 	// Functionality of the cat
 	function() {
-		let multiplier = 10;
+		let multiplier = 1;
 
 		pats+=multiplier;
 		total_pats+=multiplier;
