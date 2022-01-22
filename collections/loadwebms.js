@@ -4,7 +4,7 @@ var categories = [
 	{"folder": "feels", "count": 41},
 	{"folder": "funny", "count": 71},
 	{"folder": "kino", "count": 16},
-	{"folder": "hyperborea", "count": 24}
+	{"folder": "hyperborea", "count": 25}
 	];
 
 var category = "trollface";
@@ -32,7 +32,7 @@ function generateVideos(){
 
 		video.setAttribute("id", "vid" + i);
 		video.setAttribute("width", "376");
-		video.setAttribute("height", "260");
+		//video.setAttribute("height", "260");
 		video.setAttribute("controls", "controls");
 		document.body.appendChild(video);
 	}
