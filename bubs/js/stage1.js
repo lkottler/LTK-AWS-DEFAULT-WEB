@@ -1,6 +1,11 @@
 var warriorObj,
 	mapObj;
 
+function init_stage1(){
+	init_warrior();
+
+}
+
 function init_warrior(){
 	warriorObj = init_graphic(200, 150, 741, 547, 0.4, 1, 
 		'res/img/warrior.png', 'Purchase Mouse Warrior\nCost: 50 pats', 1, 1,
@@ -8,11 +13,10 @@ function init_warrior(){
 	// Functionality of the graphic
 	function() {
 		init_map();
-		if (!warrior.alive && cheesies >= 50){
-			cheesies-=50;
+		if (!warrior.alive && pats >= 50){
+			pats-=50;
 			warrior.alive = true;
-			console.log('updating');
-			update_text(warriorObj[1], "Revive Warrior\nCost: 50 pats");
+			update_text(warriorObj[1], 'Revive Warrior\nCost: 50 pats');
 		}
 	});
 }

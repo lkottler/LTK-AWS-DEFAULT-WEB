@@ -4,13 +4,17 @@ var mouseObj,
 	catObj,
 	mouseholeObj;
 
+function init_stage0(){
+	init_cat();
+}
+
 function init_cat(){
 	catObj = init_graphic(width/2, height/2, 400, 500, 1, 1, 
 		'res/img/cat.png', '', 1, 0,
 
 	// Functionality of the cat
 	function() {
-		let multiplier = 1;
+		let multiplier = 10;
 
 		pats+=multiplier;
 		total_pats+=multiplier;
@@ -42,7 +46,7 @@ function init_mouse(){
 }
 
 function init_mousehole(){
-	mouseObj = init_graphic(200, 1007-292/2, 349, 292, 1, 1, 
+	mouseObj = init_graphic(200, 975-292/2, 349, 292, 1, 1, 
 		'res/img/mousehole.png', '', 1, 0,
 
 	function() {

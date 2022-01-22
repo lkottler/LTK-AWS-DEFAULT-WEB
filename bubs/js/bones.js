@@ -2,6 +2,8 @@
 var pats = 0, total_pats = 0, mouse_bribe = 0,
 	unlocks = [false,false,false,false,false,false];
 
+var text_color = "black";
+
 
 // Constants Regarding style/format
 const STD_WIDTH = 1920;
@@ -13,6 +15,7 @@ const SCALING = false;
 
 var gameState = 0;
 var background_colors = ["#C8F0EB", "#02413E", "#D1D362"];
+var total_stages = 4;
 
 var width = STD_WIDTH,
 	height = STD_HEIGHT,
@@ -31,7 +34,7 @@ var stage = new Konva.Stage({
 });
 
 var layers = [[], [], [], []];
-for (var i = 0; i < 3; i++){
+for (var i = 0; i < total_stages; i++){
 	layers[i][0] = new Konva.Layer();
 	layers[i][1] = new Konva.Layer();
 
@@ -92,7 +95,7 @@ function init_graphic(x, y, img_width, img_height, scale, opacity,
 		fontSize: 40 * x_scale,
 		fontFamily: STD_FONT,
 		text: textContent,
-		fill: 'white',
+		fill: text_color,
 		opacity: textOpacity
 	});
 	layers[gameState][1].add(graphic_text);
@@ -111,8 +114,6 @@ function init_graphic(x, y, img_width, img_height, scale, opacity,
 }
 
 function change_scene(newState){
-
-
 	if (!unlocks[newState]){
 		initFuncs[newState]();
 		unlocks[newState] = true;
