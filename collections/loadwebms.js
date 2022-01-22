@@ -1,11 +1,24 @@
-var categories = [{"folder": "trollface", "count": 20}, {"folder": "terry", "count": 0}];
-var test = categories.findIndex(x => x.folder === "terry");
-console.log(categories[test].count);
-
+var categories = [
+	{"folder": "trollface", "count": 20},
+	{"folder": "terry", "count": 2},
+	{"folder": "feels", "count": 38}
+	];
 
 var category = "trollface";
 var count = categories[categories.findIndex(x => x.folder === category)].count;
 
+function loadVideos(new_category){
+	console.log(new_category);
+	destroyVideos();
+	category = new_category;
+	let index = categories.findIndex(x => x.folder === category);
+	if (index == -1)
+		console.log("Error, could not find folder in categories");
+	else {
+		count = categories[categories.findIndex(x => x.folder === category)].count;
+		generateVideos();
+	}
+}
 
 function generateVideos(){
 	for (let i = 1; i < (count + 1); i++) {
@@ -26,7 +39,8 @@ function generateVideos(){
 function destroyVideos(){
 	for (let i = 1; i < (count + 1); i++) {
 		var elem = document.getElementById("vid" + i);
-		document.body.removeChild(elem);
+		if (elem)
+			document.body.removeChild(elem);
 	}
 
 }
