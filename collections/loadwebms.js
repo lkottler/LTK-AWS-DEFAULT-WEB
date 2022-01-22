@@ -1,7 +1,8 @@
 var categories = [
 	{"folder": "trollface", "count": 20},
-	{"folder": "terry", "count": 5},
-	{"folder": "feels", "count": 38}
+	{"folder": "terry", "count": 6},
+	{"folder": "feels", "count": 40},
+	{"folder": "funny", "count": 62}
 	];
 
 var category = "trollface";
