@@ -4,7 +4,7 @@ var categories = [
 	{"folder": "feels", "count": 41},
 	{"folder": "funny", "count": 71},
 	{"folder": "kino", "count": 16},
-	{"folder": "hyperborea", "count": 25}
+	{"folder": "hyperborea", "count": 24}
 	];
 
 var category = "trollface";
