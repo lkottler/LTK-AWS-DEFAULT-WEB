@@ -7,6 +7,7 @@ body {
   background-color: firebrick;
   text-align: left;
   line-height: 16pt;
+  max-width: 100%;
 }
 
 h1 {
@@ -39,6 +40,25 @@ img {
 }
 p {
   color: red;
+}
+
+video {
+  flex: 5 5 auto;
+  align-self:  flex-start;
+  min-width: 200px;
+  min-height: 300px;
+  max-width: 600px;
+  max-height: 550px;
+  order: width;
+}
+
+.container {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: stretch;
+  justify-content: flex-start;
+  max-width: 100%;
+  display: flex;
 }
 
 .pdf {

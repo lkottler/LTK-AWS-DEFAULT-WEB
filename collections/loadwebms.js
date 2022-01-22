@@ -27,35 +27,35 @@ function generateVideos(){
 	for (let i = 1; i < (count + 1); i++) {
 		var video = document.createElement('video');
 
-		var standard_width = 376;
 
 		video.addEventListener( "loadedmetadata", function (e) {
 		    var width = this.videoWidth,
 		        height = this.videoHeight;
-		        console.log(height);
 
-		      if ( height / (width / standard_width) > 500) {
-			    this.setAttribute("height", 500);
-			  }
+		   	this.style.order = Math.ceil((height/width)*100);
 		}, false );
 
 		video.src = "video/webm";
 		video.src = "webms/" + category + "/" + i + ".webm";
 
 		video.setAttribute("id", "vid" + i);
-		video.setAttribute("width", standard_width);
-		//video.setAttribute("height", video.height/2);
 		video.setAttribute("controls", "controls");
-		document.body.appendChild(video);
+
+
+		let container = document.getElementById("webm-container");
+		container.appendChild(video);
 	}
 }
 
 
 function destroyVideos(){
+	var container = document.getElementById("webm-container");
+
 	for (let i = 1; i < (count + 1); i++) {
 		var elem = document.getElementById("vid" + i);
+
 		if (elem)
-			document.body.removeChild(elem);
+			container.removeChild(elem);
 	}
 
 }
