@@ -1,6 +1,6 @@
 var categories = [
 	{"folder": "trollface", "count": 21},
-	{"folder": "terry", "count": 8},
+	{"folder": "terry", "count": 7},
 	{"folder": "feels", "count": 41},
 	{"folder": "funny", "count": 71},
 	{"folder": "kino", "count": 16},
@@ -27,12 +27,24 @@ function generateVideos(){
 	for (let i = 1; i < (count + 1); i++) {
 		var video = document.createElement('video');
 
+		var standard_width = 376;
+
+		video.addEventListener( "loadedmetadata", function (e) {
+		    var width = this.videoWidth,
+		        height = this.videoHeight;
+		        console.log(height);
+
+		      if ( height / (width / standard_width) > 500) {
+			    this.setAttribute("height", 500);
+			  }
+		}, false );
+
 		video.src = "video/webm";
 		video.src = "webms/" + category + "/" + i + ".webm";
 
 		video.setAttribute("id", "vid" + i);
-		video.setAttribute("width", "376");
-		//video.setAttribute("height", "260");
+		video.setAttribute("width", standard_width);
+		//video.setAttribute("height", video.height/2);
 		video.setAttribute("controls", "controls");
 		document.body.appendChild(video);
 	}
