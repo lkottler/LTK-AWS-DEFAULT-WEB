@@ -40,6 +40,9 @@ function generateVideos(){
 
 		video.setAttribute("id", "vid" + i);
 		video.setAttribute("controls", "controls");
+		video.volume = 0.05;
+		// TODO: add volume input
+		//document.getElementsByTagName('video')[0].volume = 0.5;
 
 
 		let container = document.getElementById("webm-container");
