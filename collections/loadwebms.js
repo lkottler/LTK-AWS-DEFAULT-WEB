@@ -1,10 +1,11 @@
 var categories = [
-	{"folder": "trollface", "count": 21},
+	{"folder": "trollface", "count": 22},
 	{"folder": "terry", "count": 7},
-	{"folder": "feels", "count": 41},
+	{"folder": "feels", "count": 44},
 	{"folder": "funny", "count": 71},
 	{"folder": "kino", "count": 16},
-	{"folder": "hyperborea", "count": 24}
+	{"folder": "hyperborea", "count": 31},
+	{"folder": "animals", "count": 47}
 	];
 
 var category = "trollface";
