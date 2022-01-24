@@ -3,7 +3,7 @@ var categories = [
 	{"folder": "terry", "count": 7},
 	{"folder": "feels", "count": 44},
 	{"folder": "funny", "count": 71},
-	{"folder": "kino", "count": 16},
+	{"folder": "kino", "count": 19},
 	{"folder": "hyperborea", "count": 31},
 	{"folder": "animals", "count": 47}
 	];
