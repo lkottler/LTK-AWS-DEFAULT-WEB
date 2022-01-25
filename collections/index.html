@@ -2,8 +2,6 @@
 <html>
 <link rel="stylesheet" type="text/css" href="styles.css">
 <script src="jquery-3.6.0.min.js"></script>
-
-  <script type="text/javascript" src="toc.js"></script>
     
   <head>
     <title>WebM Collections</title>
@@ -13,7 +11,11 @@
     <div class="header">
       WebM collection
     </div>
-    <br>
+
+    <div class="slidecontainer">
+      <input type="range" min="0" max="100" value="5" class="slider" id="globalVolume">
+      <p class="slidertext" id="volumetext">Global Volume: 5%</p>
+    </div>
   </header>
 
   <body>
@@ -29,11 +31,13 @@
       <a href="#" onclick="loadVideos('animals'); closeNav();">Animals</a>
     </div>
 
-    <button type="button" class="toc_btn" onclick="toggleNav()">Table of Contents</button>
+    <button type="button" class="toc_btn" onclick="toggleNav()">Categories</button>
 
     <div id="webm-container" class="container"></div>
   </body>
 
+  <script type="text/javascript" src="main.js"></script>
   <script type="text/javascript" src="loadwebms.js"></script>
+
 
 </html>

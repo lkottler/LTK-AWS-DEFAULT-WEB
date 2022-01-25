@@ -22,3 +22,13 @@ function closeNav() {
   //document.getElementById("main").style.marginLeft = "0";
   sidenav_open = false;
 }
+
+var volumeControl = document.getElementById('globalVolume');
+var globalVolume = 0.05;
+
+volumeControl.addEventListener('input', function() {
+  globalVolume = this.value / 100;
+  document.getElementById('volumetext').innerHTML = "Global Volume " + this.value + "%";
+  if (temp = document.getElementsByTagName('video')) // if there are rendered videos
+    Array.from(temp).forEach((elem)=>{elem.volume = globalVolume}); // set rendered videos volume
+});

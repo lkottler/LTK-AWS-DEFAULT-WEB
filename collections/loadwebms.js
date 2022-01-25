@@ -1,3 +1,5 @@
+var webmSource = "https://s3.us-east-2.amazonaws.com/webms.logen.click/";
+
 var categories = [
 	{"folder": "trollface", "count": 22},
 	{"folder": "terry", "count": 7},
@@ -37,11 +39,11 @@ function generateVideos(){
 		}, false );
 
 		video.src = "video/webm";
-		video.src = "webms/" + category + "/" + i + ".webm";
+		video.src = webmSource + category + "/" + i + ".webm";
 
 		video.setAttribute("id", "vid" + i);
 		video.setAttribute("controls", "controls");
-		video.volume = 0.05;
+		video.volume = globalVolume;
 		// TODO: add volume input
 		//document.getElementsByTagName('video')[0].volume = 0.5;
 
