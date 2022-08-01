@@ -56,12 +56,36 @@ p {
   max-width: 1920px;
 }
 
+.video {
+  display: block;
+  max-width: 92%;
+  max-height: 92%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vid_wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
 .header {
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
   font-size: 60px;
   background: floralwhite;
+  text-align: center;
+  width: fit-content;
+}
+
+.title {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  font-size: 40px;
+  background: whitesmoke;
   text-align: center;
   width: fit-content;
 }
@@ -221,4 +245,31 @@ p {
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+.top_toc_btn {
+  z-index: 0; /* Stay on top */
+
+  position:  absolute;
+  left:  40px;
+  top: 20px;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.top_toc_btn:hover {background-color: #3e8e41}
+
+.top_toc_btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
