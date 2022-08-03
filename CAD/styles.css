@@ -100,7 +100,7 @@ video {
 }
 
 .description {
-  text-align: center;
+  text-align: left;
   background: floralwhite ;
   width: fit-content;
   margin-left: auto;
