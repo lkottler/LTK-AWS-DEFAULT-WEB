@@ -1,0 +1,47 @@
+html * 
+{
+  font-family: tahoma !important;
+}
+
+body {
+  background-color: blanchedalmond;
+  text-align: left;
+  line-height: 16pt;
+}
+
+h1 {
+  color:  black;
+  text-align: center;
+  font-size: 30px;
+
+}
+
+h2 {
+  color: black;
+  text-align: left;
+  font-size:  20px;
+  line-height: 16pt;
+}
+
+h3 {
+  color:  green;
+  font-size: 25px;
+}
+
+h4 {
+  text-align: center;
+  color:  cornflowerblue;
+  font-size: 18px;
+}
+img {
+  align-content: right;
+}
+p {
+  color: red;
+}
+
+.links 
+{
+  color: salmon;
+  text-align: center;
+}
