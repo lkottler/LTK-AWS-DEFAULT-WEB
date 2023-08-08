@@ -23,9 +23,11 @@ h2 {
   line-height: 16pt;
 }
 
-h3 {
-  color:  green;
-  font-size: 25px;
+h23 {
+  color: black;
+  text-align: center;
+  font-size:  30px;
+  line-height: 16pt;
 }
 
 h4 {
